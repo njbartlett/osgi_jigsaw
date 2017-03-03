@@ -8,7 +8,7 @@ rsync -R $(find . -not -name '*.java') ../modules
 cd -
 
 # Compile modules
-javac -modulesourcepath src -d modules $(find src -name '*.java')
+javac --module-source-path src -d modules $(find src -name '*.java')
 
 # Build module JARs
 rm -rf jars
